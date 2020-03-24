@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>
+wholesale mangement system
+</title>
+
+
+<script language="javascript" type="text/javascript">
+
+function whole()
+{
+window.open("wholesaler_page.html");
+}
+
+function validate()
+{
+var wuser="project";
+var wpass="openit";
+var user=document.main.user.value;
+var id=document.main.username.value;
+var pass=document.main.password.value;
+if(user=="retailer")
+{
+return true;
+}
+else if(user=="wholesaler")
+{
+if(id==wuser && pass==wpass)
+{
+return whole();
+}
+
+else
+{
+alert("wrong id password");
+return false;
+}
+
+}
+
+else{
+alert(" first select the user type");
+}
+
+}
+</script>
+
+
+<style>
+body{ background-color:white;}
+.box1{background-color:#1e90ff;
+height:70px;
+}
+.bcolor{
+background-color:#1e90ff;}
+.size{
+ font-size:20px;
+}
+.height{font-size:20px;
+}
+.mbox{
+height:30px;
+background-color:red;
+}
+.center
+{text-align:center;
+font-style:oblique;
+font-size:30px;
+}
+.heading{
+padding-top:20px;
+} 
+.link{font-size:15px;
+text-align:center;
+} 
+</style>
+</head>
+<body>
+<p class="box1 center heading">
+wholesale management system</p>
+<p>
+<marquee class="mbox size">welcome to our website!</marquee>
+</p>
+<p class="center bcolor">please login here!</p>
+<br>
+<form method="post" action="retailer_login.php" name="main">
+<div class="size center" >
+<input left-margin:50px; type="radio" name="user" value="retailer">RETAILER
+<br>
+<input type="radio" name="user" value="wholesaler">WHOLESALER
+<br><br>
+login id:<input type="text" name="username" placeholder="enter unique username">
+<br>
+password:<input type="password" name="password" placeholder="enter password">
+<br>
+<br>
+<input style="padding:5 25 5 25 ;" type="submit" name="login" value="login" onclick="return validate()">
+<br><br>
+<a class="link" href="signup_page.html">NEW RETAILER...</a>
+</div>
+</form>
+</body>
+</html>
